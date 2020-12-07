@@ -11,3 +11,18 @@ Giải thích: Tổng các ước của 12 là
 [Đầu vào] Integer n
 -10^9 < n < 10^9
 [Đầu ra] Long
+
+
+## Test cases
+```
+redundancy_number(6) = 12
+redundancy_number(65) = 66
+redundancy_number(858) = 858
+redundancy_number(90) = 90
+redundancy_number(8664239) = 8664240
+redundancy_number(9124812) = 9124812
+```
+
+
+
+
