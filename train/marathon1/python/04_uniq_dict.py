@@ -1,13 +1,7 @@
 def marathon(n,times):
-    # uniq(times)
-    uniq = []
-    #for i in range(len(times)):
-    #    present = times[i]
-    #    if present not in uniq:
-    #        uniq.append(present)
+    uniq = dict()
     for t in times:
-        if t not in uniq:
-            uniq.append(t)
+        uniq[t] = 0
     return len(uniq)
 
 if __name__ == "__main__":

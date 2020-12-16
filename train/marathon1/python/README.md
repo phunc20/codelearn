@@ -17,3 +17,6 @@ sys     0m0.020s
 ```
 
 **(?)** What do you think that makes the construction of `uniq` so much slower than `set(times)`? And can you improve it? That is, can you write a code in python which run almost as fast as `set(times)`?
+
+
+**(?)** In what aspects is `03_uniq_set.py` slower than `timmyFailure/01_solution.py`?
