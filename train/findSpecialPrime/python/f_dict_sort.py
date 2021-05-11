@@ -37,8 +37,10 @@ def is_special(k, primes, specials):
 
 
 def find_special_prime(n):
-    if n <= 1:
+    if 0 <= n <= 1:
         return []
+    if n < 0:
+        return find_special_prime(-n)
     primes = {2,}
     specials = [2,]
     for i in range(3, n+1, 2):
