@@ -1,7 +1,3 @@
-import logging
-logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
-
-
 def jugWater2(x,y,z):
     if z > x + y:
         return -1
@@ -40,7 +36,7 @@ def jugWater2(x,y,z):
     all_moves = (fill_x, fill_y, empty_x, empty_y, x_to_y, y_to_x)
 
     while len(new_states[step]) != 0:
-        logging.debug(f"new_states[{step}] = {new_states}")
+        #logging.debug(f"new_states[{step}] = {new_states}")
         new_states[step+1] = set()
         for state in new_states[step]:
             for move in all_moves:
@@ -58,55 +54,3 @@ def jugWater2(x,y,z):
     return -1
 
 
-
-def test(x,y,z,expected):
-    sol = jugWater2(x,y,z)
-    if sol == expected:
-        print("Congratulations!")
-    else:
-        print(f"expected = {expected}")
-        print(f"sol = {sol}")
-    print()
-
-if __name__ == "__main__":
-    t = 0
-
-    t += 1
-    print(f"Test Case {t:02d}")
-    x = 3
-    y = 5
-    z = 4
-    expected = 6
-    test(x,y,z,expected)
-
-    t += 1
-    print(f"Test Case {t:02d}")
-    x = 9
-    y = 1
-    z = 1
-    expected = 1
-    test(x,y,z,expected)
-
-    t += 1
-    print(f"Test Case {t:02d}")
-    x = 8
-    y = 7
-    z = 3
-    expected = 10
-    test(x,y,z,expected)
-
-    t += 1
-    print(f"Test Case {t:02d}")
-    x = 7
-    y = 0
-    z = 4
-    expected = -1
-    test(x,y,z,expected)
-
-    t += 1
-    print(f"Test Case {t:02d}")
-    x = 0
-    y = 6
-    z = 8
-    expected = -1
-    test(x,y,z,expected)
